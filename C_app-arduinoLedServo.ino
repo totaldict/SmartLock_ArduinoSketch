@@ -72,6 +72,11 @@ clearPack:                                // переходим сюда есл�
     case 'A':
       servo.write(Degr(StrControl));
       break;
+    case 'O':           //открывает на 5 сек замок, основной принцип открытия
+      servo.write(90);
+      delay(5000);
+      servo.write(0);
+      break;
   }
   }
 }
